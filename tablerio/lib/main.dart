@@ -1,6 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await Supabase.initialize(
+    url: 'https://qmwigrtffgucotvipbbc.supabase.co',
+    anonKey: 'sb_publishable_tsTUuT5NMOMolLkQ6gmCqA_yJinIELq',
+  );
+
   runApp(const MyApp());
 }
 
